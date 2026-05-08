@@ -3,3 +3,10 @@ langchain-core
 langchain-community
 pypdf
 pymupdf
+sentence-transformers
+datasets
+faiss-cpu
+chromadb
+langchain-google-genai
+python-dotenv
+flask

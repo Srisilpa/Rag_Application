@@ -8,3 +8,20 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Environment variables (keep .env.example in repo, not .env!)
+.env
+.env.local
+.env.*.local
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# FAISS stores (can be regenerated)
+faiss_store/
+vector_db/
+
