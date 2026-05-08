@@ -4,10 +4,10 @@ A simple AI-powered search tool to find answers about Data Structures, Algorithm
 
 ## What It Does
 
-- 🔍 **Fast Search**: Type a question, get relevant answers instantly
-- 📚 **6,800+ Documents**: Interview questions + LeetCode problems indexed
-- 🌐 **Web Interface**: Easy-to-use search box in your browser
-- 🔐 **Secure**: API keys stored safely in environment variables
+- Fast Search: Type a question, get relevant answers instantly
+- 6,800+ Documents: Interview questions + LeetCode problems indexed
+- Web Interface: Easy-to-use search box in your browser
+- Secure: API keys stored safely in environment variables
 
 ## Quick Setup
 
@@ -47,11 +47,11 @@ Search for anything like:
 
 ## How It Works
 
-1. **Load Documents** → Reads CSV files from `notebook/data/`
-2. **Split into Chunks** → Breaks documents into smaller pieces
-3. **Create Embeddings** → Converts text to numbers (vectors)
-4. **Store in FAISS** → Fast searchable database
-5. **Search** → User types query → Find matching documents → Show results
+1. Load Documents → Reads CSV files from `notebook/data/`
+2. Split into Chunks → Breaks documents into smaller pieces
+3. Create Embeddings → Converts text to numbers (vectors)
+4. Store in FAISS → Fast searchable database
+5. Search → User types query → Find matching documents → Show results
 
 ## File Structure
 
@@ -77,24 +77,26 @@ rag_application/
 
 ## Security
 
-✅ API keys go in `.env` file (never in code!)  
-✅ `.env` is in `.gitignore` (won't commit secrets)  
-✅ Use `.env.example` as template
+API keys go in `.env` file (never in code!)  
+`.env` is in `.gitignore` (won't commit secrets)  
+Use `.env.example` as template
 
 ## Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| Import errors | Run: `.venv\Scripts\python.exe -m pip install langchain-community` |
-| No documents found | Check files exist: `ls notebook/data/` |
-| Empty search index | Delete `faiss_store/` folder and restart app |
+Issue-Solution
+Import errors -	Install missing packages using pip install -r requirements.txt
+Dataset not loading	- Verify file paths inside notebook/data/
+Encoding errors	- Use encoding="utf-8" in CSVLoader
+Empty search results -	Delete faiss_store/ and restart application
+Module not found	- Activate virtual environment before running
 
-## Need More Info?
+**Ready to search? Run `python app.py` now!** 
 
-See `QUICKSTART.md` for quick reference.
 
----
 
-**Ready to search? Run `python app.py` now!** 🚀
+Author
+M. Sri Silpa
+B.Tech Information Technology Student
+AI & Full Stack Development Enthusiast
 
 
