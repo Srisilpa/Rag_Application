@@ -18,14 +18,16 @@ A simple AI-powered search tool to find answers about Data Structures, Algorithm
 .venv\Scripts\activate
 
 # Install dependencies
-uv add -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
 ### 2. Add Your API Key (Optional)
 
 ```bash
 # Copy template
-cp .env.example .env
+copy .env.example .env  # Windows
+# cp .env.example .env  # macOS/Linux
 
 # Edit .env and add your GEMINI_API_KEY if you want AI features
 ```
@@ -33,10 +35,10 @@ cp .env.example .env
 ### 3. Run the App
 
 ```bash
-python app.py
+streamlit run app.py
 ```
 
-Open: **http://127.0.0.1:8500**
+Opens at: **http://localhost:8501**
 
 ## Try It
 
@@ -57,7 +59,7 @@ Search for anything like:
 
 ```
 rag_application/
-├── app.py              ← Flask web server
+├── app.py              ← Streamlit web server
 ├── src/
 │   ├── search.py       ← Search logic
 │   ├── embedding.py    ← Vector generation
@@ -90,7 +92,7 @@ Encoding errors	- Use encoding="utf-8" in CSVLoader
 Empty search results -	Delete faiss_store/ and restart application
 Module not found	- Activate virtual environment before running
 
-**Ready to search? Run `python app.py` now!** 
+**Ready to search? Run `streamlit run app.py` now!**
 
 
 
